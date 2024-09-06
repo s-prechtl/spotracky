@@ -15,6 +15,7 @@ conn = psycopg2.connect(
 cursor = conn.cursor()
 
 cursor.execute("UPDATE users SET count=count+1")
+conn.commit()
 cursor.close()
 conn.close()
 
