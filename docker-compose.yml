@@ -3,9 +3,17 @@ services:
   app:
     restart: always
     build: .
+    networks:
+      - database-network
+    depends_on:
+      - db
     env_file:
       - .env
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+
+networks:
+  database-network:
+    external: true
