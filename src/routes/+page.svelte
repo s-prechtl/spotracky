@@ -3,7 +3,10 @@
 
 	export let data: PageData;
 </script>
-
+<svelte:head>
+	<title>Spotracky</title>
+	<meta name="description" content="Best spotify subscription tracker you can find on the internet!"/>
+</svelte:head>
 <div class="wrapper">
 	<div class="center">
 		<div class="wavy-rainbow-text">
