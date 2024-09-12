@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-host = os.getenv('DB_HOST_UPGRADE') if os.getenv('DB_HOST_UPGRADE') else os.getenv('DB_HOST')
+host = os.getenv('DB_HOST_UPDATE') if os.getenv('DB_HOST_UPDATE') else os.getenv('DB_HOST')
 conn = psycopg2.connect(
     host=host,
     database=os.getenv('DB_NAME'),
